@@ -12,7 +12,6 @@ body {
 }
 body::before,
 body::after{
-    width: 500px;
 content: '';
 z-index: 1;
 position: absolute;
@@ -69,12 +68,271 @@ header nav {
   position: relative;
   justify-content: space-between;
 }
+.menu-icon {
+  display: none; /* Hide by default on larger screens */
+}
+.close-icon{
+  display: none;
+}
+.switch{
+  display: none;
+}
+
+/* Media query for mobile view */
+@media only screen and (max-width: 768px) {
+  .footersec{
+    display: block;
+  }
+  .logo a h1{
+    display: none;
+  }
+  .toggle-switch{
+    display: none;
+  }
+  .container1 {
+    max-width: 100%; /* Take full width */
+    padding: 0 20px; /* Add some padding for better spacing */
+    overflow: hidden;
+  }
+  .container {
+    max-width: 100%; /* Take full width */
+    padding: 0 20px; /* Add some padding for better spacing */
+    margin-left: 2px;
+    margin-right: 2px;
+    overflow: hidden;
+  }
+
+  .menu-icon {
+    display: flex; /* Show menu icon */
+    cursor: pointer;
+    margin-left: auto; /* Push the menu icon to the right */
+}
+
+.close-icon {
+    display: none; /* Hide close icon by default */
+    cursor: pointer;
+    margin-left: auto; /* Push the close icon to the right */
+}
+
+  .navlist ul {
+      display: none; /* Hide the navbar */
+  }
+
+  .navlist ul.active {
+      display: block; /* Show the navbar when active */
+      z-index: 9999;
+  }
+  
+  .logo a h1{
+font-size: 1rem;
+  }
+  .searchbar{
+    display: none;
+  }
+  .searchdarksub button{
+    display:none;
+  }
+  .toggle-switch{
+    position: absolute;
+  }
+  .l{
+    padding: 1px;
+  }
+  .biosec{
+    display: block;
+  }
+  .bioimg{
+    display: none;
+  }
+  .emailsub{
+    width: 400px;
+  }
+  .hottopicsec{
+    display: block;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .hottopics {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+  .hottopics p {
+    width: 100%; /* Adjust width for smaller screens */
+    justify-content: center;
+  }
+  .hotcards {
+    width: 100%; /* Adjust width for smaller screens */
+    overflow-y: auto; /* Allow horizontal scrolling if necessary */
+    flex-wrap: nowrap; /* Ensure all cards remain in a single row */
+  }
+  .bigtitle{
+    margin: 6px auto;
+  }
+  .bigtitle h2{
+    font-size: 2rem;
+  }
+  .editorcards{
+    display: block;
+    justify-content: center;
+  }
+  .edcard:nth-child(1),.edcard:nth-child(2){
+    overflow: hidden;
+    padding: 30px;
+  }
+  .edcard:nth-child(3),
+  .edcard:nth-child(4),
+  .edcard:nth-child(5){
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  }
+  .edcard a img{
+    height: 300px;
+  }
+.contactbanner{
+  display: none;
+}
+.tagsec a h3{
+  display:none;
+}
+.bigtitle h2{
+  font-size: 2rem;
+}
+.post{
+  display: block;
+}
+.posts{
+  width: 100%;
+}
+.themeauthor{
+ display: block;
+}
+.createdby{
+  padding-bottom: 0.5rem;
+}
+.recentpostsec {
+  flex-direction: column; /* Stack recent section items vertically */
+}
+
+.postslider {
+  max-width: 100%; /* Occupy full screen width */
+  margin-top: 30px; /* Adjust margin as needed */
+}
+.post a{
+  padding-left: 2rem;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+}
+@media only screen and (max-width: 592px) {
+  .container1 {
+    max-width: 100%; /* Take full width */
+    padding: 0 20px; /* Add some padding for better spacing */
+    overflow: hidden;
+  }
+  .container {
+    max-width: 100%; /* Take full width */
+    padding: 0 20px; /* Add some padding for better spacing */
+  }
+  .emailsub {
+    width: 90%; /* Take 90% width */
+    margin: 20px auto; /* Center the element with some margin */
+    padding: 10px; /* Adjust padding */
+    
+  }
+  .emailsub form input {
+    width: calc(100% - 36px); /* Calculate width minus button padding */
+    font-size: 12px; /* Decrease font size */
+    display: none;
+  }
+  .emailsub form button {
+    padding: 8px 8px; /* Adjust padding */
+    font-size: 2px; /* Decrease font size */
+  }
+  .emailsub form button::before {
+    border-radius: 1px; /* Add border-radius */
+    background-size: 100% 100%; /* Adjust background size */
+  }
+  .hottopicsec {
+    height: auto; /* Adjust height for smaller screens */
+  }
+  .hottopics{
+    width: 100%;
+  }
+  .hotcards {
+    height: auto; /* Adjust height for smaller screens */
+    overflow: visible; /* Remove overflow for smaller screens */
+  }
+  .hcard {
+    max-width: 100%; /* Adjust card width for smaller screens */
+    min-width: 100%; /* Adjust card width for smaller screens */
+  }
+}
 .logo{
   gap: 10px;
 }
 .logo a h1 {
   font-family: sans-serif;
-  font-size: 30px;
   font-weight: 800;
   letter-spacing: 2px;
   color: #555;
@@ -88,6 +346,7 @@ header nav {
   color: #ffae81;
   cursor: pointer;
   display: flex;
+  padding-bottom: 1rem;
 }
 .navlist ul li .liactive {
   color: #fcde45;
@@ -458,7 +717,7 @@ transform: rotate(1turn);
 position: relative;
 align-items: self-start;
 justify-content: space-between;
-height: 290px;
+height: auto;
 background-color: #fcece3;
 border-radius:8px ;
 border: 1px solid #c2d4ee;
@@ -500,7 +759,7 @@ padding: 24px;
 }
 .hotcards{
   position: relative;
-  height: 100%;
+  height: 290px;
   gap: 20px;
   overflow: auto;
   scroll-behavior: smooth;
@@ -550,9 +809,6 @@ padding: 24px;
 .bigtitle{
   margin: 60px auto;
 }
-.bigtitle h2{
-  font-size: 45px;
-}
 .textcolor{
   font-size: 36px;
   background: linear-gradient(to top,#FF5733 30%,#fcb045 70%) 50%;
@@ -578,24 +834,24 @@ padding: 24px;
   border-radius: 15px;
   padding: 30px;
   overflow:hidden;
+  
+  
 }
 .edcard:nth-child(1),.edcard:nth-child(2){
   overflow: hidden;
   padding: 30px;
-  min-width: 48%;
-  max-width: 48%;
-  height: 600px;
+  max-width: 37rem;
+  
 }
 .edcard:nth-child(3),
 .edcard:nth-child(4),
 .edcard:nth-child(5){
-min-width: 32%;
-max-width: 32%;
+max-width: 24rem;
 height: auto;
 }
 .edcard a img{
 width: 100%;
-height: 63%;
+height: 300px;
 object-fit: cover;
 border-radius: 14px;
 }
@@ -716,11 +972,15 @@ transition:background 0.4s ease-in-out;
   border-radius: 16px;
   align-items: center;
   margin-bottom: 30px;
+  justify-content: center;
 }
 .tagsec a img{
   width: 32px;
   height: 32px;
   margin: 8px;
+}
+.tagsec a h3{
+  color: #708ab0;
 }
 .tagsec a:hover{
   background-color: #fff;
@@ -798,7 +1058,7 @@ transition:background 0.4s ease-in-out;
 }
 /*post slider*/
 .postslider{
-width: 45%;
+width: 35rem;
 height: auto;
 margin-top: 60px;
 }

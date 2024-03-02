@@ -1,4 +1,5 @@
-const toggleCheckbox=document.querySelector(".toggle-checkbox");
+const toggleCheckbox1=document.querySelector(".toggle-checkbox1");
+const toggleCheckbox2=document.querySelector(".toggle-checkbox2");
 const searchtoggle=document.querySelector('.searchclick');
 const searchicon=document.querySelector('.fa-magnifying-glass');
 
@@ -9,14 +10,25 @@ searchicon.addEventListener('click',function(){
         searchtoggle.style.display='none';
     }
 })
-toggleCheckbox.addEventListener('change',function(params){
+toggleCheckbox1.addEventListener('change',function(params){
     if(this.checked){
         document.body.classList.add('body');
     }else{
 document.body.classList.remove('body');
     }
 })
-
+toggleCheckbox2.addEventListener('change',function(params){
+    if(this.checked){
+        document.body.classList.add('body');
+    }else{
+document.body.classList.remove('body');
+    }
+})
+//togglemenu
+function toggleMenu() {
+    var navList = document.querySelector('.navlist ul');
+    navList.classList.toggle('active');
+}
 //header scroll
 const header=document.getElementById('header');
 

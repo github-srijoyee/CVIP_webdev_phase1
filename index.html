@@ -26,8 +26,13 @@
                 <li><a href="#blogs">Blogs<i class="fa-solid fa-sort-down"></i></a></li>
                 <li><a href="#pages">Pages<i class="fa-solid fa-sort-down"></i></a></li>
                 <li><a href="#contact">Contact<i class="fa-solid fa-sort-down"></i></a></li>
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode-toggle" class="l toggle-checkbox1">
+                    <span class="slider round"></span>
+                  </label>
             </ul>
         </div>
+        
         <div class="searchdarksub flex">
             <div class="searchbar">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -50,13 +55,15 @@
                   
             </div>
                         <div class="toggle-switch">
-                            <input type="checkbox" class="l toggle-checkbox" id="dark-mode-toggle">
+                            <input type="checkbox" class="l toggle-checkbox2" id="dark-mode-toggle">
                             <label for="dark-mode-toggle" class="toggle-lable"></label>
                         </div>
-                        <button><a href="/">Subscribe</a></button>
-                    
-            
+                        <button><a href="/">Subscribe</a></button>  
         </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> <!-- Assuming you have Font Awesome for the menu icon -->
+        </div>
+      
         </nav>
     </header>
 <main id="main">
@@ -382,23 +389,23 @@ Most useful
     </div>
     <div class="bigtitle container">
         <h2 class="textcolor" id="pages">
-            Popular tags
+            Popular topics
         </h2>
-        <p>Most searched keywords</p>
+        <p>Most searched areas</p>
     </div>
     <div class="tagsec container flex">
-        <a href="/"><img src="img/business.png" alt="">Business</a>
-        <a href="/"><img src="img/nature.png" alt="">Nature</a>
-        <a href="/"><img src="img/plant.png" alt="">Plant</a>
-        <a href="/"><img src="img/interior.png" alt="">Interior</a>
-        <a href="/"><img src="img/minimal.png" alt="">Minimal</a>
-        <a href="/"><img src="img/technology.png" alt="">Technology</a>
-        <a href="/"><img src="img/food.png" alt="">Food</a>
-        <a href="/"><img src="img/fashion.png" alt="">Fashion</a>
-        <a href="/"><img src="img/lifestyle.png" alt="">Lifestyle</a>
-        <a href="/"><img src="img/culture.png" alt="">Culture</a>
-        <a href="/"><img src="img/travel.png" alt="">Travel</a>
-        <a href="/"><img src="img/wildlife.png" alt="">Wildlife</a>
+        <a href="/"><img src="img/business.png" alt=""><h3>Business</h3></a>
+        <a href="/"><img src="img/nature.png" alt=""><h3>Nature</h3></a>
+        <a href="/"><img src="img/plant.png" alt=""><h3>Plant</h3></a>
+        <a href="/"><img src="img/interior.png" alt=""><h3>Interior</h3></a>
+        <a href="/"><img src="img/minimal.png" alt=""><h3>Minimal</h3></a>
+        <a href="/"><img src="img/technology.png" alt=""><h3>Technology</h3></a>
+        <a href="/"><img src="img/food.png" alt=""><h3>Food</h3></a>
+        <a href="/"><img src="img/fashion.png" alt=""><h3>Fashion</h3></a>
+        <a href="/"><img src="img/lifestyle.png" alt=""><h3>Lifestyle</h3></a>
+        <a href="/"><img src="img/culture.png" alt=""><h3>Culture</h3></a>
+        <a href="/"><img src="img/travel.png" alt=""><h3>Travel</h3></a>
+        <a href="/"><img src="img/wildlife.png" alt=""><h3>Wildlife</h3></a>
     </div>
     <section class="recentpostsec container flex">
 <div class="recentposts">

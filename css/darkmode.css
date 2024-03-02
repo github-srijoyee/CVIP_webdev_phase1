@@ -88,3 +88,8 @@
 .body .footersec li a{
     color: #94a9c9;
 }
+@media only screen and (max-width: 768px) {
+    .menu-icon {
+        color:orange;
+    }
+}
