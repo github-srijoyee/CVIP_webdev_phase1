@@ -80,12 +80,26 @@ header nav {
 
 /* Media query for mobile view */
 @media only screen and (max-width: 768px) {
+  header{
+    margin-top: 1rem;
+    object-fit: cover;
+  }
+  .logo{
+    position: fixed;
+  }
+
   .footersec{
     display: block;
   }
   .logo a h1{
     display: none;
   }
+ .logo{
+  position: fixed;
+  top:0;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+ }
   .toggle-switch{
     display: none;
   }
@@ -103,6 +117,11 @@ header nav {
   }
 
   .menu-icon {
+    margin-top: 1rem;
+    position: fixed;
+    top:0;
+    right:0;
+    padding-right: 2.5rem;
     display: flex; /* Show menu icon */
     cursor: pointer;
     margin-left: auto; /* Push the menu icon to the right */
@@ -118,6 +137,9 @@ header nav {
       display: none; /* Hide the navbar */
   }
 
+ #header.scrolled{
+  padding: 30px;
+ }
   .navlist ul.active {
       display: block; /* Show the navbar when active */
       z-index: 9999;
@@ -149,7 +171,6 @@ font-size: 1rem;
   }
   .hottopicsec{
     display: block;
-    width: 100%;
     align-items: center;
     justify-content: center;
   }
@@ -247,6 +268,14 @@ font-size: 1rem;
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+header li{
+  padding-top: 2rem;
+  align-items: flex-start;
+}
+header{
+  margin-top:1px;
 }
 
 .slider:before {
